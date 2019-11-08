@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/hotel-sync-oyo.iml" filepath="$PROJECT_DIR$/hotel-sync-oyo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hotel-sync-oyo-access/hotel-sync-oyo-access.iml" filepath="$PROJECT_DIR$/hotel-sync-oyo-access/hotel-sync-oyo-access.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hotel-sync-oyo-server/hotel-sync-oyo-server.iml" filepath="$PROJECT_DIR$/hotel-sync-oyo-server/hotel-sync-oyo-server.iml" />
+    </modules>
+  </component>
+</project>

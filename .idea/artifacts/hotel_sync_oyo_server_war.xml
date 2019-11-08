@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="hotel-sync-oyo-server:war">
+    <output-path>$PROJECT_DIR$/hotel-sync-oyo-server/target</output-path>
+    <root id="archive" name="hotel-sync-oyo-server-1.0.0.war">
+      <element id="artifact" artifact-name="hotel-sync-oyo-server:war exploded" />
+    </root>
+  </artifact>
+</component>

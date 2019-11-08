@@ -10,5 +10,87 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>hotel-sync-oyo-server</artifactId>
+    <packaging>war</packaging>
+    <name>hotel-sync-oyo-server</name>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.fangcang</groupId>
+            <artifactId>hotel-sync-oyo-access</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
+    <profiles>
+        <!--开发环境通用打包 profile -->
+        <profile>
+            <id>development</id>
+            <build>
+                <filters>
+                    <filter>src/main/filter/filter_DC_dev.properties</filter>
+                </filters>
+            </build>
+        </profile>
+
+        <!--测试环境部署通用打包 profile -->
+        <profile>
+            <id>test01</id>
+            <build>
+                <filters>
+                    <filter>src/main/filter/filter_DC_test01.properties</filter>
+                </filters>
+            </build>
+        </profile>
+        <profile>
+            <id>test02</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <filters>
+                    <filter>src/main/filter/filter_DC_test02.properties</filter>
+                </filters>
+            </build>
+        </profile>
+        <profile>
+            <id>test03</id>
+            <build>
+                <filters>
+                    <filter>src/main/filter/filter_DC_test03.properties</filter>
+                </filters>
+            </build>
+        </profile>
+
+        <!--测试环境部署通用打包 profile -->
+        <profile>
+            <id>docker01</id>
+            <build>
+                <filters>
+                    <filter>src/main/filter/filter_DC_docker01.properties</filter>
+                </filters>
+            </build>
+        </profile>
+
+        <!--生产环境部署通用打包 profile -->
+        <profile>
+            <id>production</id>
+            <build>
+                <filters>
+                    <filter>src/main/filter/filter_DC_prod.properties</filter>
+                </filters>
+            </build>
+        </profile>
+    </profiles>
 </project>
